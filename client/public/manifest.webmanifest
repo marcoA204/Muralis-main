@@ -1,0 +1,18 @@
+{
+  "name": "Muralis",
+  "short_name": "Muralis",
+  "description": "Simulador de Arte Urbana e Fachadas",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#151413",
+  "theme_color": "#151413",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

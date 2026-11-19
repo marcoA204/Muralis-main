@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+@media (max-width: 767px) {
+  input, textarea, select {
+    font-size: 16px !important;
+  }
+}
+
+html, body {
+  overscroll-behavior: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #151413;
+  color: #ece6d8;
+  user-select: none;
+  touch-action: manipulation;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+::selection {
+  background-color: #ee5a3c;
+  color: #151413;
+}
+
+.safe-top {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1c1b19;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3a3835;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #55514b;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  background: #33312e;
+  border-radius: 2px;
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 2px;
+  background: #ee5a3c;
+  cursor: pointer;
+  border: 1px solid #151413;
+  transition: transform 0.1s ease;
+}
+
+@media (pointer: coarse) {
+  input[type=range] {
+    height: 8px;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    height: 28px;
+    width: 28px;
+    border-radius: 2px;
+  }
+}
+
+input[type=range]:focus-visible::-webkit-slider-thumb {
+  box-shadow: 0 0 0 2px #151413, 0 0 0 4px #ee5a3c;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #ee5a3c;
+  outline-offset: 1px;
+}
